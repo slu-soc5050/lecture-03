@@ -1,14 +1,14 @@
 lecture-03 <img src="https://slu-soc5050.github.io/images/logo.png" align="right" />
 ===========================================================
 [![](https://img.shields.io/badge/semester-fall%202018-orange.svg)](https://github.com/slu-soc5050/lecture-03)
-[![](https://img.shields.io/badge/release-draft-red.svg)](https://github.com/slu-soc5050/lecture-03)
+[![](https://img.shields.io/badge/release-draft-lp%20only.svg)](https://github.com/slu-soc5050/lecture-03)
 [![](https://img.shields.io/github/release/slu-soc5050/lecture-03.svg?label=version)](https://github.com/slu-soc5050/lecture-03/releases)
 [![](https://img.shields.io/github/last-commit/slu-soc5050/lecture-03.svg)](https://github.com/slu-soc5050/lecture-03/commits/master)
 [![](https://img.shields.io/github/repo-size/slu-soc5050/lecture-03.svg)](https://github.com/slu-soc5050/lecture-03)
 [![Travis-CI Build Status](https://travis-ci.org/slu-soc5050/lecture-03.svg?branch=master)](https://travis-ci.org/slu-soc5050/lecture-03)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/slu-soc5050/lecture-03?branch=master&svg=true)](https://ci.appveyor.com/project/chris-prener/lecture-03)
 
-This is the repository for Lecture 01 of the Saint Louis University course SOC 4015/5050 - Quantitative Analysis. This lecture introduces basic descriptive statistics as well as concepts related to exploratory data analysis.
+This is the repository for Lecture 03 of the Saint Louis University course SOC 4015/5050 - Quantitative Analysis. This lecture introduces basic descriptive statistics as well as concepts related to exploratory data analysis.
 
 ### Lecture Objectives
 At the end of this lecture and its corresponding assignments, students should be able to:
