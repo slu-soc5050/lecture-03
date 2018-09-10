@@ -13,7 +13,10 @@ This is the repository for Lecture 03 of the Saint Louis University course SOC 4
 ### Lecture Objectives
 At the end of this lecture and its corresponding assignments, students should be able to:
 
-1.
+1. Analyze a distribution with the appropriate descriptive statistics for its level of measurement
+2. Create descriptive plots that are appropriate for a distribution's level of measurement
+3. Describe the importance of data visualization and exploratory data analyss
+4. Formulate a question using a "reproducible example" (`reprex`)
 
 ### Lecture Resources
 
