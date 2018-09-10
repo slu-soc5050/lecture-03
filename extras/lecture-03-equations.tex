@@ -1,0 +1,105 @@
+\documentclass{tufte-handout}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+% set hyperlink attributes
+\hypersetup{colorlinks}
+
+\usepackage{amsmath}
+
+% set image attributes:
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% create environment for bottom paragraph:
+\newenvironment{bottompar}{\par\vspace*{\fill}}{\clearpage}
+
+% ============================================================
+
+% define the title
+\title{SOC 4015/5050: Lecture 03 Equations}
+\author{Christopher Prener, Ph.D.}
+\date{Fall 2018}
+% ============================================================
+\begin{document}
+% ============================================================
+\maketitle % generates the title
+% ============================================================
+
+\vspace{5mm}
+\section{Median (odd \textit{n} of items)}
+Let $m =$ the median item's term:
+\begin{equation}
+\scalebox{2} {$ m = \left( \frac { n+1 }{ 2 }  \right) ^{ th } $}
+\end{equation}
+
+\vspace{10mm}
+\section{Median (even \textit{n} of items)}
+\begin{subequations}
+\noindent Let ${ m }_{ a } =$ the median item's term:
+\begin{align}
+\scalebox{2} {$ m_{ a } = \left( \frac { n+1 }{ 2 }  \right) ^{ th } $}
+\end{align}
+
+\vspace{2mm}
+\noindent Let ${ x }_{ a } =$ the next lower value before ${ m }_{ a }$. Let ${ x }_{ b } =$ the next higher value after ${ m }_{ a }$.
+
+\vspace{2mm}
+\noindent Let ${ m }_{ b } =$ the median:
+\begin{align}
+\scalebox{2} {$ { m }_{ b } = \left( \frac { { x }_{ a } + { x }_{ b } }{ 2 } \right) $}
+\end{align}
+\end{subequations}
+
+\vspace{10mm}
+\section{Mean}
+\begin{equation}
+\scalebox{2} {$ \bar{ x } =\frac { \sum _{ i=1 }^{ n }{ x }  }{ n } $}
+\end{equation}
+
+\newpage
+\section{Standard Deviation}
+\begin{subequations}
+
+\subsection*{Deviance}
+\begin{equation}
+\scalebox{2} {$ { D }= { (x-\bar{ x } ) } $}
+\end{equation}
+
+\vspace{3mm}
+\subsection*{Total Error}
+\begin{equation}
+\scalebox{2} {$ { TE }= \sum _{ i=1 }^{ n }{ (x-\bar{ x } ) } $}
+\end{equation}
+
+\vspace{3mm}
+\subsection*{Sum of Squared Error}
+\begin{equation}
+\scalebox{2} {$ { SS }= \sum _{ i=1 }^{ n }{ (x-\bar{ x } )^{ 2 } } $}
+\end{equation}
+
+\vspace{3mm}
+\subsection*{Variance}
+\begin{equation}
+\scalebox{2} {$ { s }^{ 2 }=\frac { \sum _{ i=1 }^{ n }{ (x-\bar{ x } )^{ 2 } }  }{ n-1 } $}
+\end{equation}
+
+\vspace{3mm}
+\subsection*{Standard Deviation}
+\begin{equation}
+\scalebox{2} {$ { s }=\sqrt { \frac { \sum _{ i=1 }^{ n }{ (x-\bar{ x } )^{ 2 } }  }{ n-1 } } $}
+\end{equation}
+\end{subequations}
+
+\newpage
+\section*{Formatting Work by Hand}
+Given $ x = [1,7,3,2,8,6,3,8,7]  $
+\begin{fullwidth}
+\begin{figure}[!h]
+\includegraphics[scale=.54]{"workByHand"}
+\end{figure}
+\end{fullwidth}
+
+% ============================================================
+\end{document}
