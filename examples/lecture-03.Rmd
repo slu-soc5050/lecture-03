@@ -30,7 +30,7 @@ This notebook requires data from the `ggplot2` package:
 auto <- mpg
 ```
 
-## Illustrate Density Plits
+## Illustrate Density Plots
 
 First, we'll cover the new `geom` from `ggplot2` - `geom_density()`. This works the same way as other continuous geoms:
 

@@ -31,7 +31,7 @@ This notebook requires data from the `ggplot2` package:
 auto <- mpg
 ```
 
-## Illustrate Density Plits
+## Illustrate Density Plots
 
 First, we’ll cover the new `geom` from `ggplot2` - `geom_density()`.
 This works the same way as other continuous geoms:
@@ -41,7 +41,7 @@ ggplot(data = auto) +
   geom_density(mapping = aes(x = hwy))
 ```
 
-![](lecture-03-examples_files/figure-gfm/density-geom-1.png)<!-- -->
+![](lecture-03_files/figure-gfm/density-geom-1.png)<!-- -->
 
 Remember to interpret this as density and not as the raw frequency of
 observations\!
