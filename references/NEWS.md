@@ -1,3 +1,7 @@
+# lecture-03 v18.2.1
+
+* Fix typo on functions handout
+
 # lecture-03 v18.2.0
 
 * Update `references/`
