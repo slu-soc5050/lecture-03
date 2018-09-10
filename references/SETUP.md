@@ -14,6 +14,10 @@ The following packages are required for this lecture. See the [package index](ht
 * `knitr` - create documents from R notebooks
 * `rmarkdown` - write in Markdown syntax
 
+### Other packages
+
+* `janitor` - frequency tables
+
 ### Optional packages
 
 * `Tmisc` - if you want to play with the tidy version of the Anscombe's Quartet
