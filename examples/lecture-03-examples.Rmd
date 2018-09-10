@@ -1,0 +1,86 @@
+---
+title: "Lecture 03 Example Code"
+author: "Christopher Prener, Ph.D."
+date: '(`r format(Sys.time(), "%B %d, %Y")`)'
+output: 
+  github_document: default
+  html_notebook: default 
+---
+
+## Introduction
+This notebook illustrates functions for calculating descriptive statistics.
+
+## Dependencies
+This notebook requires the `ggplot2` package as well as the `janitor` and `skimr` packages. 
+
+```{r load-packages}
+# tidyverse packages
+library(ggplot2) # for the mpg data
+
+# other packages
+library(skimr)   # descriptive statistics
+```
+
+We'll also use `base` and `stats`, but they are already loaded!
+
+## Load Data
+This notebook requires data from the `ggplot2` package:
+
+```{r load-data}
+auto <- mpg
+```
+
+## Illustrate Density Plits
+
+First, we'll cover the new `geom` from `ggplot2` - `geom_density()`. This works the same way as other continuous geoms:
+
+```{r density-geom}
+ggplot(data = auto) + 
+  geom_density(mapping = aes(x = hwy))
+```
+
+Remember to interpret this as density and not as the raw frequency of observations!
+
+## Individual Descriptive Statistics
+
+We can calculate mean, median, and standard deviation separately:
+
+```{r individual-descriptives}
+median(auto$hwy)
+mean(auto$hwy)
+sd(auto$hwy)
+```
+
+Note how this is specified (`df$var`) and how looks in terms of output - they aren't labeled. The output follows the sequence of the inputs - median, then mean, than mode. The average highway fuel efficiency is 23.440 miles per gallon and the typical deviation from this mean is plus or minus 5.955 miles per gallon - the bulk of observations lie between 17.4 and 29.4. Remember that, when there is missing data, all of these functions need the `na.rm = TRUE` optional argument!
+
+The range can be found by subtracting the min value from the max:
+
+```{r range}
+max(auto$hwy)-min(auto$hwy)
+```
+
+The `range()` function will give you those max and min values rather than the difference:
+
+```{r range-fxn}
+range(auto$hwy)
+```
+
+## Summary Tables
+
+We can get either very simple summaries or complex ones. The simple one is produced like so:
+
+```{r simple-summary}
+summary(auto$hwy)
+```
+
+We can also get a more complex summary:
+
+```{r skim}
+skim(auto)
+```
+
+Finally, remember that `skim()` can be used for just one or two variables as well:
+
+```{r skim-selection}
+skim(auto, hwy, cty)
+```
