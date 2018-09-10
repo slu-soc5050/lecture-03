@@ -3,6 +3,8 @@ The following packages are required for this lecture. See the [package index](ht
 
 ### `tidyverse`
 
+* `dplyr`
+* `ggplot2`
 * `reprex`
 
 ### Statistics

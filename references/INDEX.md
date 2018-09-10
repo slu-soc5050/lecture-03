@@ -12,6 +12,8 @@ See the [topic index](https://slu-soc5050.github.io/topic-index/) and the [packa
 
 * `base`
 * `datasets`
+* `dplyr`
+* `ggplot2`
 * `reprex`
 * `skmir`
 * `stats`

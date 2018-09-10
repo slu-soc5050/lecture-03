@@ -13,6 +13,8 @@ Web: https://slu-soc5050.github.io
 URL: https://github.com/slu-soc5050/lecture-03
 BugReports: https://github.com/slu-soc5050/lecture-03/issues
 Imports:
+    dplyr,
+    ggplot2,
     janitor,
     knitr,
     reprex,
