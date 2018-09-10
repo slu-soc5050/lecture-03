@@ -17,6 +17,7 @@ The following packages are required for this lecture. See the [package index](ht
 ### Other packages
 
 * `janitor` - frequency tables
+* `testDriveR` - data for lab and problem set
 
 ### Optional packages
 
