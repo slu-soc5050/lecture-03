@@ -1,0 +1,107 @@
+\documentclass{tufte-handout}
+
+\usepackage{xcolor}
+
+% set image attributes:
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% set hyperlink attributes
+\hypersetup{colorlinks}
+
+% indent subsections
+\newenvironment{subs}
+  {\adjustwidth{3em}{0pt}}
+  {\endadjustwidth}
+
+% ============================================================
+
+% define the title
+\title{SOC 4015/5050: Lecture 03 Functions}
+\author{Christopher Prener, Ph.D.}
+\date{Fall 2018}
+% ============================================================
+\begin{document}
+% ============================================================
+\maketitle % generates the title
+% ============================================================
+
+\vspace{5mm}
+\section{Packages}
+\begin{itemize}
+\item \texttt{base}
+\item \texttt{janitor}
+\item \texttt{tidyverse}
+\begin{itemize}
+\item \texttt{reprex}
+\end{itemize}
+\item \texttt{stats}
+\end{itemize}
+
+\vspace{5mm}
+\section{Density Plot}
+{\color{red}\texttt{geom\_density}}\texttt{(mapping = aes(\textit{aesthetic}))}
+
+
+\vspace{5mm}
+\section{Tables}
+\begin{subs}
+\subsection{Basic Table}
+\texttt{base::}{\color{red}\texttt{table}}\texttt{(\textit{dataFrame}\$\textit{var})}
+
+\vspace{3mm}
+\subsection{Table via \texttt{janitor}}
+\texttt{base::}{\color{red}\texttt{tabyl}}\texttt{(\textit{dataFrame}, \textit{var})}
+\par \noindent \textit{or}
+\par \noindent \texttt{\textit{dataFrame} \%$>$\% {\color{red}\texttt{tabyl}}\texttt{(\textit{var})}}
+\end{subs}
+
+\vspace{5mm}
+\section{Individual Descriptive Statistics}\marginnote{\textit{Note:} allof the individual descriptive statistics take either a single vector (\texttt{x}) or a data frame vector combination (\texttt{df\$x}).}
+\begin{subs}
+\vspace{3mm}
+\subsection{Median}
+\texttt{stats::}{\color{red}\texttt{median}}\texttt{(\textit{x}, na.rm = FALSE)}
+\end{subs}
+
+\newpage
+\section{Individual Descriptive Statistics (con't)}
+\begin{subs}
+\subsection{Mean}
+\texttt{base::}{\color{red}\texttt{mean}}\texttt{(\textit{x}, na.rm = FALSE)}
+
+\vspace{3mm}
+\subsection{Variance}
+\texttt{stats::}{\color{red}\texttt{var}}\texttt{(\textit{x}, na.rm = FALSE)}
+
+\vspace{3mm}
+\subsection{Standard Deviation}
+\texttt{stats::}{\color{red}\texttt{sd}}\texttt{(\textit{x}, na.rm = FALSE)}
+
+\vspace{3mm}
+\subsection{Range}
+\texttt{base::}{\color{red}\texttt{range}}\texttt{(\textit{x})}
+\par \noindent \texttt{base::}{\color{red}\texttt{min}}\texttt{(\textit{x})}
+\par \noindent \texttt{base::}{\color{red}\texttt{max}}\texttt{(\textit{x})}
+
+\vspace{3mm}
+\subsection{Inter-quartile Range (IQR)}
+\texttt{stats::}{\color{red}\texttt{IQR}}\texttt{(\textit{x})}
+\end{subs}
+
+\vspace{5mm}
+\section{Overview of Descriptive Statistics}
+\begin{subs}
+\subsection{Simple Summary}
+\texttt{base::}{\color{red}\texttt{summary}}\texttt{(\textit{x})}
+
+\vspace{3mm}
+\subsection{\texttt{skimr} Summary}
+\texttt{skimr::}{\color{red}\texttt{skim}}\texttt{(\textit{dataFrame}, \textit{varlist})}
+\end{subs}
+
+\vspace{5mm}
+\section{Reproducible Example}
+\texttt{reprex::}{\color{red}\texttt{reprex}}\texttt{()}
+% ============================================================
+\end{document}
