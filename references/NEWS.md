@@ -1,8 +1,9 @@
-# lecture-03 v18.2.0.9000
+# lecture-03 v18.2.0
 
 * Update `references/`
 * Update `DESCRIPTION` dependencies
 * Add all lecture handouts and source
+* Add lab-02 instructions
 
 # lecture-03 v18.1.1
 
