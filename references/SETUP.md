@@ -3,21 +3,17 @@ The following packages are required for this lecture. See the [package index](ht
 
 ### `tidyverse`
 
-*
+* `reprex`
 
 ### Statistics
 
-*
+* `skimr` - descriptive statistics
 
 ### Literate Programming
 
 * `knitr` - create documents from R notebooks
 * `rmarkdown` - write in Markdown syntax
 
-### Project Organization
+### Optional packages
 
-* `here` - manage file paths
-
-### Other packages
-
-*
+* `Tmisc` - if you want to play with the tidy version of the Anscombe's Quartet

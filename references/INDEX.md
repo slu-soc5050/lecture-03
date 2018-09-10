@@ -3,17 +3,21 @@ See the [topic index](https://slu-soc5050.github.io/topic-index/) and the [packa
 
 ## Key Topics
 
-*
+* Calculating descriptive statistics
+* Exploratory data analysis
+* Reproducible examples
 
 ## Key Tools
 ### `R` Packages
 
-* 
+* `base`
+* `datasets`
+* `reprex`
+* `skmir`
+* `stats`
+* `Tmisc`
 
 ### Course Tools
 
 * `R`
-
-### Outside Tools
-
-*
+* GitHub
