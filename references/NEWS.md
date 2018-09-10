@@ -1,3 +1,8 @@
+# lecture-03 v18.2.0
+
+* Update `references/`
+
+
 # lecture-03 v18.1.1
 
 * Update lecture prep instructions to fix typo on question 2 and add submission link
