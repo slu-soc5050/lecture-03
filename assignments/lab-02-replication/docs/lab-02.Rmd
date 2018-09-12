@@ -1,0 +1,147 @@
+---
+title: "Lab-02"
+author: "Christopher Prener, Ph.D."
+date: '(`r format(Sys.time(), "%B %d, %Y")`)'
+output: 
+  github_document: default
+  html_notebook: default 
+---
+
+## Introduction
+This notebook replicates the code needed to solve 
+
+## Dependencies
+This notebook relies on the `datasets` package for data as well as the `stats` and `base` packages. These are automatically loaded by RStudio and no `library()` function calls are needed here.
+
+In addition, we need the `ggplot2` package for plotting, the `janitor` package for tables, the `skimr` package for descriptive statistics, and the `testDriveR` package for data:
+
+```{r load-packages}
+# tidyverse packages
+library(ggplot2)   # plotting data
+
+# other packages
+library(janitor)     # frequency tables
+library(skimr)       # descriptive statistics
+library(testDriveR)  # data
+```
+
+## Load Data
+This notebook requires data from `auto17`:
+
+```{r load-data}
+cars <- auto17
+```
+
+## Part 1
+An additional replication file is available in the replication repo showing the work done by hand.
+
+## Part 2
+
+### Question 5
+For the varaible `driveStr2`, the starting point is to determine what level of measurement it represents. Quickly we, can use `summary()` to determine this:
+
+```{r find-lom-driveStr2}
+summary(cars$driveStr2d)
+```
+
+It is character, which is *usually* an indication that it is a categorical or ordinal variable. Perhaps we can learn more from a quick frequency table:
+
+```{r find-lom-driveStr2-2}
+table(cars$driveStr2)
+```
+
+Now we can see that there are five possible values representing whether the car is two wheel drive, four wheel drive, or all wheel drive. This means it is a categorical variable.
+
+#### Plot
+The most appropriate plot for a categorical variable like `driveStr2` is a bar plot.
+
+```{r plot-driveStr2}
+ggplot(data = cars) +
+  geom_bar(mapping = aes(x = driveStr2))
+```
+
+From the plot, we can see that two wheel drive cars are far and away the most common types of vehicles, with a pretty even split between those with front wheel drive and those with rear wheel drive. The next most common type of drive system is all wheel drive, followed by four wheel drive.
+
+#### Frequency Table
+We can create a slightly nicer looking frequency table using the `janitor` package. 
+
+```{r table-driveStr2}
+tabyl(cars, driveStr2)
+```
+
+The frequency table and the plot give us largely the same amount of information, though we can more easily see specific count and percent values using the table.
+
+#### Mode
+Based on both the plot and the table, we can see that the mode is two wheel drive vehicles that are front wheel drive, with an $n$ of $380$. These represent $31.25$% of the observations in these data.
+
+### Question 6
+For the varaible `cityFE`, the starting point is to determine what level of measurement it represents. Quickly we, can use `summary()` to determine this:
+
+```{r find-lom-cityFE}
+summary(cars$cityFE)
+```
+
+The output here indicates that these are continuous data.
+
+#### Plot
+One appropriate plot for a continuous variable like `cityFE` is a histogram.
+
+```{r plot-cityFE}
+ggplot(data = cars) +
+  geom_histogram(mapping = aes(x = cityFE))
+```
+
+The plot gives us the sense that the most common fuel efficienies are in the high teens and low twenties. Cars with city fuel economy greater than 30 miles per gallon are not common, though there are a few with fuel efficiencies as high as the high 50s.
+
+#### Median
+We can get the median with a stand alone function:
+
+```{r median-cityFE}
+median(cars$cityFE)
+```
+
+The median value of the `cityFE` distribution is $20$.
+
+#### Mean
+We can get the mean with a stand alone function:
+
+```{r mean-cityFE}
+mean(cars$cityFE)
+```
+
+The median value of the `cityFE` distribution is $20.593$.
+
+#### Standard Deviation
+We can get the standard deviation with a stand alone function:
+
+```{r sd-cityFE}
+sd(cars$cityFE)
+```
+
+The standard deviation value of the `cityFE` distribution is $5.868$. This means that the majority of cars have a city fuel economy between $14.725$ and $26.461$ miles per gallon (the mean plus or minus the standard deviation).
+
+#### Range
+We can get the range with a combination of the maximum and minimum values:
+
+```{r range-cityFE}
+max(cars$cityFE)-min(cars$cityFE)
+```
+
+The range of the `cityFE` distribution is $48$.
+
+#### Inter-Quartile Range
+We can get the IQR with a stand alone function:
+
+```{r iqr-cityFE}
+IQR(cars$cityFE)
+```
+
+The IQR of the `cityFE` distribution is $6$. When combined with the median, this suggests that the bulk of the observations ($50$%) lie within a few miles per gallon of $20$.
+
+### Question 7
+We can also use the `skimr` package to create a full output of descriptive statistics:
+
+```{r skim}
+skim(cars)
+```
+
