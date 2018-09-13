@@ -1,3 +1,7 @@
+# lecture-03 v18.3.0
+
+* Add ps-01 instructions
+
 # lecture-03 v18.2.1
 
 * Fix typo on functions handout
