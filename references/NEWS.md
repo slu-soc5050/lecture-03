@@ -1,6 +1,7 @@
 # lecture-03 v18.3.0
 
 * Add ps-01 instructions
+* Add lab-02 replication materials
 
 # lecture-03 v18.2.1
 
